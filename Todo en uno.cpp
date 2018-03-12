@@ -9,7 +9,6 @@
 using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
 char opcion;
 int salir = 0;
-string pausa;
 string nombre_persona; //Programas 2 y 3
 int edad_persona; //Programa 3
 char letra; //Programa 4
