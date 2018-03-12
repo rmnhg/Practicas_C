@@ -7,33 +7,33 @@
 #include <string> //Permite el uso de cadenas de texto en nuestro programa.
 #define pi 3.14159265 //Número Pi aproximado
 
-using namespace std; //Lo usamos para iportar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
+using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
 int radio,longitud,area;
 char decision;
 
 int main (){
     setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres españoles.
-    cout << "Programa para calcular la longitud y el área de una circunferencia.\n";
-    cout << "Por favor, introduzca el radio de la circunferencia:\n";
+    cout << "Programa para calcular la longitud y el área de un círculo\n";
+    cout << "Por favor, introduzca el radio de la círculo:\n";
     cin >> radio;
-    cout << "Por favor indíque si desea calcular la longitud (l o L) o el área (a o A) de la circunferencia:\n";
+    cout << "Por favor indíque si desea calcular la longitud (l o L) o el área (a o A) de la círculo:\n";
     cin >> decision;
     switch (decision){
     case 'l': //Cuando la tecla es l.
         longitud = 2 * pi * radio;
-        cout << "La longitud de su circunferencia de radio " << radio << " es la siguiente: " << endl << longitud;
+        cout << "La longitud de su círculo de radio " << radio << " es la siguiente: " << endl << longitud;
     break;
     case 'L': //Cuando la tecla es L.
         longitud = 2 * pi * radio;
-        cout << "La longitud de su circunferencia de radio " << radio << " es la siguiente: " << endl << longitud;
+        cout << "La longitud de su círculo de radio " << radio << " es la siguiente: " << endl << longitud;
     break;
     case 'a': //Cuando la tecla es a.
         area = pi * radio * radio;
-        cout << "La longitud de su circunferencia de radio " << radio << " es la siguiente: " << endl << area;
+        cout << "El área de su círculo de radio " << radio << " es el siguiente: " << endl << area;
     break;
     case 'A': //Cuando la tecla es A.
         area = pi * radio * radio;
-        cout << "La longitud de su circunferencia de radio " << radio << " es la siguiente: " << endl << area;
+        cout << "El área de su círculo de radio " << radio << " es el siguiente: " << endl << area;
     break;
     //Y sino...
     default:
