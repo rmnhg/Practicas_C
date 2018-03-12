@@ -1,12 +1,12 @@
-//Ramón Hernández García 2ºC
+//RamÃ³n HernÃ¡ndez GarcÃ­a 2ÂºC
 //Todos los programas de C++
-//Informática 2º Bachillerato
-#include <stdio.h> //Definiciones de las macros, constantes y declaraciones de funciones de la biblioteca Standard de programación C.
+//InformÃ¡tica 2Âº Bachillerato
+#include <stdio.h> //Definiciones de las macros, constantes y declaraciones de funciones de la biblioteca Standard de programaciÃ³n C.
 #include <iostream> //Controla el flujo de entrada y salida de datos.
-#include <math.h> //Contiene muchas funciones matemáticas.
+#include <math.h> //Contiene muchas funciones matemÃ¡ticas.
 #include <string> //Permite el uso de cadenas de texto en nuestro programa.
 
-using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
+using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, asÃ­, evitar introducir muchas funciones empezando por "std::".
 char opcion;
 int salir = 0;
 string pausa;
@@ -25,33 +25,33 @@ char decision; //Programas 9, 10, 11 y 12
 int area; //Programas 11 y 12
 int radio,longitud; //Programa 11
 int lado, perimetro; //Programa 12
-#define pi 3.14159265 //Número Pi aproximado //Programa 11
+#define pi 3.14159265 //NÃºmero Pi aproximado //Programa 11
 
 int main() {
-    setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres españoles.
-    while (salir == 0){ //No queremos salir todavía del programa, saldremos cuando esta variable valga otra cosa, en nuestro caso 1.
+    setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres espaÃ±oles.
+    while (salir == 0){ //No queremos salir todavÃ­a del programa, saldremos cuando esta variable valga otra cosa, en nuestro caso 1.
     system("cls");
     cout << "Lista de programas:\n";
     cout << "a. Hola mundo.\n";
     cout << "b. Saludo con tu nombre.\n";
-    cout << "c. Acceso a mayores de 18 años.\n";
-    cout << "d. ¿Vocal o consonante?.\n";
-    cout << "e. Cuenta de números dentro de un intervalo definido.\n";
+    cout << "c. Acceso a mayores de 18 aÃ±os.\n";
+    cout << "d. Â¿Vocal o consonante?.\n";
+    cout << "e. Cuenta de nÃºmeros dentro de un intervalo definido.\n";
     cout << "f. Calculadora de factoriales.\n";
-    cout << "g. Cuenta de números enteros pares dentro de un intervalo definido.\n";
-    cout << "h. Cuenta de números enteros impares dentro de un intervalo definido.\n";
-    cout << "i. Conversión grados centígrados a Farenhait.\n";
-    cout << "j. Cuenta de números enteros dentro de un intervalo definido en orden creciente o decreciente.\n";
-    cout << "k. Calculadora del área o de la longitud de un círculo.\n";
-    cout << "l. Cálculo del área o del perímetro de un cuadrado.\n";
+    cout << "g. Cuenta de nÃºmeros enteros pares dentro de un intervalo definido.\n";
+    cout << "h. Cuenta de nÃºmeros enteros impares dentro de un intervalo definido.\n";
+    cout << "i. ConversiÃ³n grados centÃ­grados a Farenhait.\n";
+    cout << "j. Cuenta de nÃºmeros enteros dentro de un intervalo definido en orden creciente o decreciente.\n";
+    cout << "k. Calculadora del Ã¡rea o de la longitud de un cÃ­rculo.\n";
+    cout << "l. CÃ¡lculo del Ã¡rea o del perÃ­metro de un cuadrado.\n";
     cout << "m. Salir del programa.\n";
     cout << endl;
-    cout << "Introduzca su opción, por favor:\n";
+    cout << "Introduzca su opciÃ³n, por favor:\n";
     cin>>opcion;
     switch (opcion) {
         case 'a':
             cout<<"Programa 1:"<<endl<<endl;
-            cout<<"¡Hola Mundo!\n";
+            cout<<"Â¡Hola Mundo!\n";
             cout<<endl;
             system("PAUSE");
             break;
@@ -59,7 +59,7 @@ int main() {
             cout<<"Programa 2:"<<endl<<endl;
             cout<< "Por favor, inserte su nombre:"; //Pregunto el nombre
             cin >> nombre_persona; //Registro el nombre
-            cout<<"Hola "  << nombre_persona << endl << "¿Qué tal estás?"; //Saludo a la persona
+            cout<<"Hola "  << nombre_persona << endl << "Â¿QuÃ© tal estÃ¡s?"; //Saludo a la persona
             cout<<endl;
             system("PAUSE");
             break;
@@ -70,16 +70,16 @@ int main() {
                 cout<< "Por favor, introduzca su edad:\n"; //Pregunto la edad
                 cin >> edad_persona; //Registro la edad
                 if (edad_persona<18) {
-                    cout<< "Lo sentimos " << nombre_persona << ", no podemos mostrarle este contenido. ¡Vuelva con 18 años!";
+                    cout<< "Lo sentimos " << nombre_persona << ", no podemos mostrarle este contenido. Â¡Vuelva con 18 aÃ±os!";
                 } else {
-                    cout<<"\n¡Bienvenido al casino! " << nombre_persona;
+                    cout<<"\nÂ¡Bienvenido al casino! " << nombre_persona;
                 }
             cout<<endl;
             system("PAUSE");
             break;
         case 'd':
             cout<<"Programa 4:"<<endl<<endl;
-            cout << "Buenos días. Por favor, introduzca una letra.\nYo le diré si es consonante o vocal: ";
+            cout << "Buenos dÃ­as. Por favor, introduzca una letra.\nYo le dirÃ© si es consonante o vocal: ";
             cin>>letra;
             switch (letra){
             case 'a': //Cuando la letra es a.
@@ -123,7 +123,7 @@ int main() {
             cout<<"Programa 5:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
-            cout << "Por favor, introduzca el último numero del intervalo:\n";
+            cout << "Por favor, introduzca el Ãºltimo numero del intervalo:\n";
             cin >> numerodos;
             cout << "Su intervalo [" << numerouno << "," << numerodos << "] es el siguiente:" << endl;
             for (contador=numerouno; contador <= numerodos; contador++){
@@ -134,13 +134,13 @@ int main() {
             break;
         case 'f':
             cout<<"Programa 6:"<<endl<<endl;
-            cout << "Por favor, introduzca un número para calcular su factorial:\n";
+            cout << "Por favor, introduzca un nÃºmero para calcular su factorial:\n";
             cin >> numero;
             factorial=1;
             for (b=1 ; b<=numero ; b++) {
                 factorial=b*factorial;
             }
-            cout << "El factorial del número " << numero << " es " << factorial << ".";
+            cout << "El factorial del nÃºmero " << numero << " es " << factorial << ".";
             cout<<endl;
             system("PAUSE");
             break;
@@ -148,15 +148,15 @@ int main() {
             cout<<"Programa 7:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
-            cout << "Por favor, introduzca el último numero del intervalo:\n";
+            cout << "Por favor, introduzca el Ãºltimo numero del intervalo:\n";
             cin >> numerodos;
-            cout << "Su intervalo [" << numerouno << "," << numerodos << "] de números pares es el siguiente:" << endl;
-            if ( numerouno % 2 == 0 ) { //Divido el primer número entre dos. Si el resto es cero el número es par.
+            cout << "Su intervalo [" << numerouno << "," << numerodos << "] de nÃºmeros pares es el siguiente:" << endl;
+            if ( numerouno % 2 == 0 ) { //Divido el primer nÃºmero entre dos. Si el resto es cero el nÃºmero es par.
                 for (contador=numerouno; contador <= numerodos; contador+=2){
                     cout << contador << ", ";
                 }
             } else {
-                numerouno = numerouno + 1; //Como el primer número es impar, le sumo una unidad para que el primer número sea par.
+                numerouno = numerouno + 1; //Como el primer nÃºmero es impar, le sumo una unidad para que el primer nÃºmero sea par.
                 for (contador=numerouno; contador <= numerodos; contador+=2){
                     cout << contador << ", ";
                 }
@@ -168,11 +168,11 @@ int main() {
             cout<<"Programa 8:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
-            cout << "Por favor, introduzca el último numero del intervalo:\n";
+            cout << "Por favor, introduzca el Ãºltimo numero del intervalo:\n";
             cin >> numerodos;
-            cout << "Su intervalo [" << numerouno << "," << numerodos << "] de números pares es el siguiente:" << endl;
-            if ( numerouno % 2 == 0 ) { //Divido el primer número entre dos. Si el resto es cero el número es par.
-                numerouno = numerouno + 1; //Como el primer número es impar, le sumo una unidad para que el primer número sea par.
+            cout << "Su intervalo [" << numerouno << "," << numerodos << "] de nÃºmeros pares es el siguiente:" << endl;
+            if ( numerouno % 2 == 0 ) { //Divido el primer nÃºmero entre dos. Si el resto es cero el nÃºmero es par.
+                numerouno = numerouno + 1; //Como el primer nÃºmero es impar, le sumo una unidad para que el primer nÃºmero sea par.
                 for (contador=numerouno; contador <= numerodos; contador+=2){
                     cout << contador << ", ";
                 }
@@ -186,19 +186,19 @@ int main() {
             break;
         case 'i':
             cout<<"Programa 9:"<<endl<<endl;
-        	cout<<"Seleccione la operación que desea realizar:\n"
-            <<"1. Grados centígrados a Farenheit\n"
-            <<"2. Grados Farenheit a centígrados\n";
+        	cout<<"Seleccione la operaciÃ³n que desea realizar:\n"
+            <<"1. Grados centÃ­grados a Farenheit\n"
+            <<"2. Grados Farenheit a centÃ­grados\n";
             cin>>decision;
             switch (decision) {
             case '1':
-                cout << "Por favor, introduzca su temperatura en grados centígrados para calcular su equivalencia en la escala Farenheit:\n";
+                cout << "Por favor, introduzca su temperatura en grados centÃ­grados para calcular su equivalencia en la escala Farenheit:\n";
                 cin >> temperaturaC;
                 temperaturaF= temperaturaC * 1.8000 + 32.00;
                 cout << "El resultado es " << temperaturaF << ".";
                 break;
             case '2':
-                cout << "Por favor, introduzca su temperatura en grados Farenheit para calcular su equivalencia en grados centígrados:\n";
+                cout << "Por favor, introduzca su temperatura en grados Farenheit para calcular su equivalencia en grados centÃ­grados:\n";
                 cin >> temperaturaF;
                 temperaturaC= (temperaturaF - 32.00) / 1.8000;
                 cout << "El resultado es " << temperaturaC << ".";
@@ -213,9 +213,9 @@ int main() {
             cout<<"Programa 10:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
-            cout << "Por favor, introduzca el último numero del intervalo:\n";
+            cout << "Por favor, introduzca el Ãºltimo numero del intervalo:\n";
             cin >> numerodos;
-            cout << "Por favor indíque si desea ver los números de mayor a menor (+) o de menor a mayor (-):\n";
+            cout << "Por favor indÃ­que si desea ver los nÃºmeros de menor a mayor (+) o de mayor a menor (-):\n";
             cin >> decision;
             switch (decision){
             case '+': //Cuando la tecla es +.
@@ -239,27 +239,27 @@ int main() {
             break;
         case 'k':
             cout<<"Programa 11 (blog 1):"<<endl<<endl;
-            cout << "Programa para calcular la longitud y el área de una circunferencia.\n";
-            cout << "Por favor, introduzca el radio de la circunferencia:\n";
+            cout << "Programa para calcular la longitud y el Ã¡rea de una cÃ­rculo.\n";
+            cout << "Por favor, introduzca el radio de la cÃ­rculo:\n";
             cin >> radio;
-            cout << "Por favor indíque si desea calcular la longitud (l o L) o el área (a o A) de la circunferencia:\n";
+            cout << "Por favor indÃ­que si desea calcular la longitud (l o L) o el Ã¡rea (a o A) de la cÃ­rculo:\n";
             cin >> decision;
             switch (decision){
             case 'l': //Cuando la tecla es l.
                 longitud = 2 * pi * radio;
-                cout << "La longitud de su circunferencia de radio " << radio << " es la siguiente: " << endl << longitud;
+                cout << "La longitud de su cÃ­rculo de radio " << radio << " es la siguiente: " << endl << longitud;
             break;
             case 'L': //Cuando la tecla es L.
                 longitud = 2 * pi * radio;
-                cout << "La longitud de su circunferencia de radio " << radio << " es la siguiente: " << endl << longitud;
+                cout << "La longitud de su cÃ­rculo de radio " << radio << " es la siguiente: " << endl << longitud;
             break;
             case 'a': //Cuando la tecla es a.
                 area = pi * radio * radio;
-                cout << "El área de su circunferencia de radio " << radio << " es el siguiente: " << endl << area;
+                cout << "El Ã¡rea de su cÃ­rculo de radio " << radio << " es el siguiente: " << endl << area;
             break;
             case 'A': //Cuando la tecla es A.
                 area = pi * radio * radio;
-                cout << "El área de su circunferencia de radio " << radio << " es el siguiente: " << endl << area;
+                cout << "El Ã¡rea de su cÃ­rculo de radio " << radio << " es el siguiente: " << endl << area;
                 break;
             //Y sino...
             default:
@@ -270,27 +270,27 @@ int main() {
             break;
         case 'l':
             cout<<"Programa 12 (blog 2):"<<endl<<endl;
-            cout << "Programa para calcular el perímetro y el área de un cuadrado.\n";
+            cout << "Programa para calcular el perÃ­metro y el Ã¡rea de un cuadrado.\n";
             cout << "Por favor, introduzca el lado del cuadrado:\n";
             cin >> lado;
-            cout << "Por favor indíque si desea calcular  el perímetro (p o P) o el área (a o A) del cuadrado:\n";
+            cout << "Por favor indÃ­que si desea calcular  el perÃ­metro (p o P) o el Ã¡rea (a o A) del cuadrado:\n";
             cin >> decision;
             switch (decision){
             case 'p': //Cuando la tecla es p.
                 perimetro = 4 * lado;
-                cout << "El perímetro de su cuadrado de lado " << lado << " es el siguiente: " << endl << perimetro;
+                cout << "El perÃ­metro de su cuadrado de lado " << lado << " es el siguiente: " << endl << perimetro;
                 break;
             case 'P': //Cuando la tecla es P.
                 perimetro = 4 * lado;
-                cout << "El perímetro de su cuadrado de lado " << lado << " es el siguiente: " << endl << perimetro;
+                cout << "El perÃ­metro de su cuadrado de lado " << lado << " es el siguiente: " << endl << perimetro;
                 break;
             case 'a': //Cuando la tecla es a.
                 area = lado * lado;
-                cout << "El área de su cuadrado de lado " << lado << " es el siguiente: " << endl << area;
+                cout << "El Ã¡rea de su cuadrado de lado " << lado << " es el siguiente: " << endl << area;
                 break;
             case 'A': //Cuando la tecla es A.
                 area = lado * lado;
-                cout << "El área de su cuadrado de lado " << lado << " es el siguiente: " << endl << area;
+                cout << "El Ã¡rea de su cuadrado de lado " << lado << " es el siguiente: " << endl << area;
                 break;
             //Y sino...
             default:
@@ -304,9 +304,8 @@ int main() {
             break;
         //Y sino...
         default:
-            cout << endl << "Error, vuelva a introducir su opción por favor."<<endl;
+            cout << endl << "Error, vuelva a introducir su opciÃ³n por favor."<<endl;
             system("PAUSE");
     }
 }
 }
-//cin.get()
