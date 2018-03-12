@@ -1,22 +1,22 @@
-//Ramón Hernández García 2ºC
-//Décimo programa - C++
-//Informática 2º Bachillerato
-#include <stdio.h> //Definiciones de las macros, constantes y declaraciones de funciones de la biblioteca Standard de programación C.
+//RamÃ³n HernÃ¡ndez GarcÃ­a 2ÂºC
+//DÃ©cimo programa - C++
+//InformÃ¡tica 2Âº Bachillerato
+#include <stdio.h> //Definiciones de las macros, constantes y declaraciones de funciones de la biblioteca Standard de programaciÃ³n C.
 #include <iostream> //Controla el flujo de entrada y salida de datos.
-#include <math.h> //Contiene muchas funciones matemáticas.
+#include <math.h> //Contiene muchas funciones matemÃ¡ticas.
 #include <string> //Permite el uso de cadenas de texto en nuestro programa.
 
-using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
+using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, asÃ­, evitar introducir muchas funciones empezando por "std::".
 int numerouno,numerodos,contador;
 char decision;
 
 int main (){
-    setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres españoles.
+    setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres espaÃ±oles.
     cout << "Por favor, introduzca el primer numero del intervalo:\n";
     cin >> numerouno;
-    cout << "Por favor, introduzca el último numero del intervalo:\n";
+    cout << "Por favor, introduzca el Ãºltimo numero del intervalo:\n";
     cin >> numerodos;
-    cout << "Por favor indíque si desea ver los números de mayor a menor (+) o de menor a mayor (-):\n";
+    cout << "Por favor indÃ­que si desea ver los nÃºmeros de menor a mayor (+) o de mayor a menor (-):\n";
     cin >> decision;
     switch (decision){
     case '+': //Cuando la tecla es +.
