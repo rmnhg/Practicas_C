@@ -18,12 +18,12 @@ int numerodos; //Programas 5, 7, 8 y 10
 int numero; //Programa 6
 int b; //Programa 6
 int factorial; //Programa 6
-int temperaturaC; //Programa 9
-int temperaturaF; //Programa 9
+float temperaturaC; //Programa 9
+float temperaturaF; //Programa 9
 char decision; //Programas 9, 10, 11 y 12
-int area; //Programas 11 y 12
-int radio,longitud; //Programa 11
-int lado, perimetro; //Programa 12
+float area; //Programas 11 y 12
+float radio,longitud; //Programa 11
+float lado, perimetro; //Programa 12
 float solecuacionmas,solecuacionmenos,coef_x2,coef_x1,coef_x0,raiz; //Programa 13
 #define pi 3.14159265 //Número Pi aproximado //Programa 11
 
@@ -302,7 +302,7 @@ int main() {
             break;
         case 'm':
             cout<<"Programa 13:"<<endl<<endl;
-            cout<<"Calculadora de ecuaciones de segundo grado.\n"<<endl;
+            cout<<"Calculadora de ecuaciones de segundo grado.\n";
             cout<<"Buenos días usuario:"<<endl //Mensaje de bienvenida
                 <<"En este programa puede especificar los coeficientes de una ecuación de segundo grado y yo le diré sus dos soluciones en caso de que existan."<<endl
                 <<"En caso de que no existan soluciones, se lo notificaré."<<endl<<endl

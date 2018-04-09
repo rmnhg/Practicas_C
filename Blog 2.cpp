@@ -7,7 +7,7 @@
 #include <string> //Permite el uso de cadenas de texto en nuestro programa.
 
 using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
-int lado,perimetro,area;
+float lado,perimetro,area;
 char decision;
 
 int main (){

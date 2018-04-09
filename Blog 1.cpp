@@ -8,7 +8,7 @@
 #define pi 3.14159265 //Número Pi aproximado
 
 using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
-int radio,longitud,area;
+float radio,longitud,area;
 char decision;
 
 int main (){
