@@ -44,7 +44,7 @@ int main() {
     cout << "j. Cuenta de números enteros dentro de un intervalo definido en orden creciente o decreciente.\n";
     cout << "k. Calculadora del área o de la longitud de un círculo.\n";
     cout << "l. Cálculo del área o del perímetro de un cuadrado.\n";
-    cour << "m. Calculadora de ecuaciones de segundo grado.\n;
+    cout << "m. Calculadora de ecuaciones de segundo grado.\n";
     cout << "n. Salir del programa.\n";
     cout << endl;
     cout << "Introduzca su opción, por favor:\n";
