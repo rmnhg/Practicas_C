@@ -321,6 +321,7 @@ int main() {
                 cout<<"Los resultados de su ecuación de segundo grado son "<<solecuacionmas<<" y "<<solecuacionmenos<<"."<<endl
                     <<"¡Gracias por utilizar mi programa!"<<endl; //Me despido del usuario
             }
+            system("PAUSE");
             break;
         case 'n': //Salir
             salir = 1;
