@@ -24,6 +24,7 @@ char decision; //Programas 9, 10, 11 y 12
 int area; //Programas 11 y 12
 int radio,longitud; //Programa 11
 int lado, perimetro; //Programa 12
+float solecuacionmas,solecuacionmenos,coef_x2,coef_x1,coef_x0,raiz; //Programa 13
 #define pi 3.14159265 //Número Pi aproximado //Programa 11
 
 int main() {
@@ -43,7 +44,8 @@ int main() {
     cout << "j. Cuenta de números enteros dentro de un intervalo definido en orden creciente o decreciente.\n";
     cout << "k. Calculadora del área o de la longitud de un círculo.\n";
     cout << "l. Cálculo del área o del perímetro de un cuadrado.\n";
-    cout << "m. Salir del programa.\n";
+    cour << "m. Calculadora de ecuaciones de segundo grado.\n;
+    cout << "n. Salir del programa.\n";
     cout << endl;
     cout << "Introduzca su opción, por favor:\n";
     cin>>opcion;
@@ -298,7 +300,29 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'm': //Salir
+        case 'm':
+            cout<<"Programa 13:"<<endl<<endl;
+            cout<<"Calculadora de ecuaciones de segundo grado.\n"<<endl;
+            cout<<"Buenos días usuario:"<<endl //Mensaje de bienvenida
+                <<"En este programa puede especificar los coeficientes de una ecuación de segundo grado y yo le diré sus dos soluciones en caso de que existan."<<endl
+                <<"En caso de que no existan soluciones, se lo notificaré."<<endl<<endl
+                <<"Introduzca su coeficiente principal (x^2):"<<endl;
+            cin>>coef_x2;
+            cout<<"Introduzca su segundo coeficiente (x^1):"<<endl;
+            cin>>coef_x1;
+            cout<<"Introduzca su término independiente (x^0):"<<endl;
+            cin>>coef_x0;
+            raiz = ((coef_x1 * coef_x1) - (4 * coef_x2 * coef_x0)); //Primero evalúo el signo de la base de la raíz
+            if (raiz < 0) { //Si es negativo, devulevo error al usuario
+                cout<<"Error, la base de la raíz cuadrada es negativa. Los resultados de esta ecuación no son reales. La base de su raíz es: "<<raiz<<".";
+            } else { //Sino calcula las dos ecuaciones
+                solecuacionmas = ((- coef_x1 + sqrt( raiz )))/(2*coef_x2); //Solución con el +
+                solecuacionmenos = ((- coef_x1 - sqrt( raiz )))/(2*coef_x2); //SWolución con el -
+                cout<<"Los resultados de su ecuación de segundo grado son "<<solecuacionmas<<" y "<<solecuacionmenos<<"."<<endl
+                    <<"¡Gracias por utilizar mi programa!"<<endl; //Me despido del usuario
+            }
+            break;
+        case 'n': //Salir
             salir = 1;
             break;
         //Y sino...
