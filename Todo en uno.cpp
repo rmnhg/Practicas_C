@@ -7,7 +7,7 @@
 #include <string> //Permite el uso de cadenas de texto en nuestro programa.
 
 using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
-char opcion;
+int opcion;
 int salir = 0;
 string nombre_persona; //Programas 2 y 3
 int edad_persona; //Programa 3
@@ -32,31 +32,31 @@ int main() {
     while (salir == 0){ //No queremos salir todavía del programa, saldremos cuando esta variable valga otra cosa, en nuestro caso 1.
     system("cls");
     cout << "Lista de programas:\n";
-    cout << "a. Hola mundo.\n";
-    cout << "b. Saludo con tu nombre.\n";
-    cout << "c. Acceso a mayores de 18 años.\n";
-    cout << "d. ¿Vocal o consonante?.\n";
-    cout << "e. Cuenta de números dentro de un intervalo definido.\n";
-    cout << "f. Calculadora de factoriales.\n";
-    cout << "g. Cuenta de números enteros pares dentro de un intervalo definido.\n";
-    cout << "h. Cuenta de números enteros impares dentro de un intervalo definido.\n";
-    cout << "i. Conversión grados centígrados a Farenhait.\n";
-    cout << "j. Cuenta de números enteros dentro de un intervalo definido en orden creciente o decreciente.\n";
-    cout << "k. Calculadora del área o de la longitud de un círculo.\n";
-    cout << "l. Cálculo del área o del perímetro de un cuadrado.\n";
-    cout << "m. Calculadora de ecuaciones de segundo grado.\n";
-    cout << "n. Salir del programa.\n";
+    cout << "1. Hola mundo.\n";
+    cout << "2. Saludo con tu nombre.\n";
+    cout << "3. Acceso a mayores de 18 años.\n";
+    cout << "4. ¿Vocal o consonante?.\n";
+    cout << "5. Cuenta de números dentro de un intervalo definido.\n";
+    cout << "6. Calculadora de factoriales.\n";
+    cout << "7. Cuenta de números enteros pares dentro de un intervalo definido.\n";
+    cout << "8. Cuenta de números enteros impares dentro de un intervalo definido.\n";
+    cout << "9. Conversión grados centígrados a Farenhait.\n";
+    cout << "10. Cuenta de números enteros dentro de un intervalo definido en orden creciente o decreciente.\n";
+    cout << "11. Calculadora del área o de la longitud de un círculo.\n";
+    cout << "12. Cálculo del área o del perímetro de un cuadrado.\n";
+    cout << "13. Calculadora de ecuaciones de segundo grado.\n";
+    cout << "14. Salir del programa.\n";
     cout << endl;
     cout << "Introduzca su opción, por favor:\n";
     cin>>opcion;
     switch (opcion) {
-        case 'a':
+        case 1:
             cout<<"Programa 1:"<<endl<<endl;
             cout<<"¡Hola Mundo!\n";
             cout<<endl;
             system("PAUSE");
             break;
-        case 'b':
+        case 2:
             cout<<"Programa 2:"<<endl<<endl;
             cout<< "Por favor, inserte su nombre:"; //Pregunto el nombre
             cin >> nombre_persona; //Registro el nombre
@@ -64,7 +64,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'c':
+        case 3:
                 cout<<"Programa 3:"<<endl<<endl;
                 cout<< "Por favor, introduza su nombre:\n";
                 cin >> nombre_persona; //Registro el nombre de la persona
@@ -78,7 +78,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'd':
+        case 4:
             cout<<"Programa 4:"<<endl<<endl;
             cout << "Buenos días. Por favor, introduzca una letra.\nYo le diré si es consonante o vocal: ";
             cin>>letra;
@@ -120,7 +120,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'e':
+        case 5:
             cout<<"Programa 5:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -133,7 +133,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'f':
+        case 6:
             cout<<"Programa 6:"<<endl<<endl;
             cout << "Por favor, introduzca un número para calcular su factorial:\n";
             cin >> numero;
@@ -145,7 +145,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'g':
+        case 7:
             cout<<"Programa 7:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -165,7 +165,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'h':
+        case 8:
             cout<<"Programa 8:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -185,7 +185,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'i':
+        case 9:
             cout<<"Programa 9:"<<endl<<endl;
         	cout<<"Seleccione la operación que desea realizar:\n"
             <<"1. Grados centígrados a Farenheit\n"
@@ -210,7 +210,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'j':
+        case 10:
             cout<<"Programa 10:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -238,7 +238,7 @@ int main() {
             cout << endl;
             system("PAUSE");
             break;
-        case 'k':
+        case 11:
             cout<<"Programa 11 (blog 1):"<<endl<<endl;
             cout << "Programa para calcular la longitud y el área de una círculo.\n";
             cout << "Por favor, introduzca el radio de la círculo:\n";
@@ -269,7 +269,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'l':
+        case 12:
             cout<<"Programa 12 (blog 2):"<<endl<<endl;
             cout << "Programa para calcular el perímetro y el área de un cuadrado.\n";
             cout << "Por favor, introduzca el lado del cuadrado:\n";
@@ -300,7 +300,7 @@ int main() {
             cout<<endl;
             system("PAUSE");
             break;
-        case 'm':
+        case 13:
             cout<<"Programa 13:"<<endl<<endl;
             cout<<"Calculadora de ecuaciones de segundo grado.\n";
             cout<<"Buenos días usuario:"<<endl //Mensaje de bienvenida
@@ -323,7 +323,7 @@ int main() {
             }
             system("PAUSE");
             break;
-        case 'n': //Salir
+        case 14: //Salir
             salir = 1;
             break;
         //Y sino...
