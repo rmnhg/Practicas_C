@@ -1,14 +1,27 @@
 //Ramón Hernández García 2ºC
 //Todos los programas de C++
 //Informática 2º Bachillerato
+
 #include <stdio.h> //Definiciones de las macros, constantes y declaraciones de funciones de la biblioteca Standard de programación C.
 #include <iostream> //Controla el flujo de entrada y salida de datos.
 #include <math.h> //Contiene muchas funciones matemáticas.
 #include <string> //Permite el uso de cadenas de texto en nuestro programa.
+#include <stdlib.h> //Para que la función system() funcione correctamente
+
+//Librerías necesarias para la función std::setlocale:
+#include <cstdio>
+#include <clocale>
+#include <ctime>
+#include <cwchar>
+
 
 using namespace std; //Lo usamos para importar todas las funciones de la bibilioteca stl y, así, evitar introducir muchas funciones empezando por "std::".
-int opcion;
-int salir = 0;
+
+//Variables del programa:
+int opcion; //Variable para elegir una opción del menú
+int salir = 0; //Variable para salir del programa
+int error; //Variable de error, para volver a preguntar
+int opciones2; //Variable para cambiar las opciones avanzadas del programa
 string nombre_persona; //Programas 2 y 3
 int edad_persona; //Programa 3
 char letra; //Programa 4
@@ -24,12 +37,16 @@ char decision; //Programas 9, 10, 11 y 12
 float area; //Programas 11 y 12
 float radio,longitud; //Programa 11
 float lado, perimetro; //Programa 12
-float solecuacionmas,solecuacionmenos,coef_x2,coef_x1,coef_x0,raiz; //Programa 13
+float solecuacionmas,solecuacionmenos,coef_x2,coef_x1,coef_x0,a,c,d,raiz; //Programa 13
 #define pi 3.14159265 //Número Pi aproximado //Programa 11
 
 int main() {
+
     setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres españoles.
-    while (salir == 0){ //No queremos salir todavía del programa, saldremos cuando esta variable valga otra cosa, en nuestro caso 1.
+    setlocale(LC_NUMERIC, "es_ES.UTF-8"); //Permite mostrar los números con decimales con una coma
+    setlocale(LC_TIME, "es_ES.UTF-8"); //Para mostrar la fecha en español
+
+    while (salir == 0){ //No queremos salir todavía del programa. Saldremos cuando esta variable valga otra cosa, en nuestro caso 1.
     system("cls");
     cout << "Lista de programas:\n";
     cout << "1. Hola mundo.\n";
@@ -45,7 +62,8 @@ int main() {
     cout << "11. Calculadora del área o de la longitud de un círculo.\n";
     cout << "12. Cálculo del área o del perímetro de un cuadrado.\n";
     cout << "13. Calculadora de ecuaciones de segundo grado.\n";
-    cout << "14. Salir del programa.\n";
+    cout << "14. Opciones avanzadas del programa.\n";
+    cout << "15. Salir del programa.\n";
     cout << endl;
     cout << "Introduzca su opción, por favor:\n";
     cin>>opcion;
@@ -303,27 +321,152 @@ int main() {
         case 13:
             cout<<"Programa 13:"<<endl<<endl;
             cout<<"Calculadora de ecuaciones de segundo grado.\n";
-            cout<<"Buenos días usuario:"<<endl //Mensaje de bienvenida
-                <<"En este programa puede especificar los coeficientes de una ecuación de segundo grado y yo le diré sus dos soluciones en caso de que existan."<<endl
-                <<"En caso de que no existan soluciones, se lo notificaré."<<endl<<endl
-                <<"Introduzca su coeficiente principal (x^2):"<<endl;
-            cin>>coef_x2;
-            cout<<"Introduzca su segundo coeficiente (x^1):"<<endl;
-            cin>>coef_x1;
-            cout<<"Introduzca su término independiente (x^0):"<<endl;
-            cin>>coef_x0;
-            raiz = ((coef_x1 * coef_x1) - (4 * coef_x2 * coef_x0)); //Primero evalúo el signo de la base de la raíz
-            if (raiz < 0) { //Si es negativo, devulevo error al usuario
-                cout<<"Error, la base de la raíz cuadrada es negativa. Los resultados de esta ecuación no son reales. La base de su raíz es: "<<raiz<<".";
-            } else { //Sino calcula las dos ecuaciones
-                solecuacionmas = ((- coef_x1 + sqrt( raiz )))/(2*coef_x2); //Solución con el +
-                solecuacionmenos = ((- coef_x1 - sqrt( raiz )))/(2*coef_x2); //SWolución con el -
-                cout<<"Los resultados de su ecuación de segundo grado son "<<solecuacionmas<<" y "<<solecuacionmenos<<"."<<endl
-                    <<"¡Gracias por utilizar mi programa!"<<endl; //Me despido del usuario
+			while (salir == 0) {
+			system("cls"); //Limpia la pantalla
+			cout<<"Buenos días usuario:"<<endl //Mensaje de bienvenida
+				<<"¿Qué desea hacer?"<<endl
+				<<"1. Resolver una ecuación automáticamente."<<endl
+				<<"2. Resolver ecuación manualmente."<<endl
+				<<"3. Salir del programa."<<endl;
+			cin>>opcion;
+			switch (opcion) {
+			case 1:
+				cout<<"En este programa puede especificar los coeficientes de una ecuación de segundo grado y yo le diré sus dos soluciones en caso de que existan."<<endl
+					<<"En caso de que no existan soluciones, se lo notificaré."<<endl<<endl
+					<<"Introduzca su coeficiente principal (x^2):"<<endl;
+				cin>>coef_x2;
+				cout<<"Introduzca su segundo coeficiente (x^1):"<<endl;
+				cin>>coef_x1;
+				cout<<"Introduzca su término independiente (x^0):"<<endl;
+				cin>>coef_x0;
+				raiz = ((coef_x1 * coef_x1) - (4 * coef_x2 * coef_x0)); //Primero evalúo el signo de la base de la raíz
+				if (raiz < 0) { //Si es negativo, devulevo error al usuario
+						cout<<"Error, la base de la raíz cuadrada es negativa. Los resultados de esta ecuación no son reales. La base de su raíz es: "<<raiz<<".";
+				} else { //Sino calcula las dos ecuaciones
+				solecuacionmas = ((- coef_x2 + sqrt( raiz )))/(2*coef_x2); //Solución con el +
+				solecuacionmenos = ((- coef_x2 - sqrt( raiz )))/(2*coef_x2); //SWolución con el -
+					cout<<"Los resultados de la ecuación "<<coef_x2<<"x^2+"<<coef_x1<<"x^1+"<<coef_x0<<" son "<<solecuacionmas<<" y "<<solecuacionmenos<<"."<<endl
+						<<"¡Gracias por utilizar mi programa!"<<endl; //Me despido del usuario
+				}
+				system("PAUSE");
+				break;
+			case 2:
+				cout<<"En este programa puede especificar los coeficientes de una ecuación de segundo grado y la resolveremos paso a paso."<<endl
+					<<"Introduzca su coeficiente principal (x^2):"<<endl;
+				cin>>coef_x2;
+				cout<<"Introduzca su segundo coeficiente (x^1):"<<endl;
+				cin>>coef_x1;
+				cout<<"Introduzca su término independiente (x^0):"<<endl;
+				cin>>coef_x0;
+				cout<<endl<<"Solución 1:"<<endl
+					<<"\nPaso 1: (-"<<coef_x2<<"+("<<coef_x1<<"^2-4*"<<coef_x2<<"*"<<coef_x0<<")^1/2)/(2*"<<coef_x2<<")"<<endl<<endl;
+				system("PAUSE");
+				a=coef_x1 * coef_x1;
+				d=4*coef_x2*coef_x0;
+				c=2*coef_x2;
+				cout<<"\nPaso 2: (-"<<coef_x2<<"+("<<a<<"-"<<d<<")^1/2)/("<<c<<")"<<endl<<endl;
+				system("PAUSE");
+				raiz=a-b;
+				cout<<"\nPaso 3: (-"<<coef_x2<<"+("<<raiz<<")^1/2)/("<<c<<")"<<endl<<endl;
+				system("PAUSE");
+				if (raiz<0) {
+					cout<<"\nComo la base de la raíz es "<<raiz<<", que es menor que 0, las soluciones de esta ecuación van a ser irreales y, por tanto, no podemos seguir."<<endl;
+				} else {
+					a=sqrt(raiz);
+					cout<<"\nPaso 4: (-"<<coef_x2<<"+"<<a<<")/("<<c<<")"<<endl<<endl;
+					system("PAUSE");
+					b=-coef_x2+a;
+					cout<<"\nPaso 5: "<<b<<"/"<<c<<endl<<endl;
+					system("PAUSE");
+					solecuacionmas = b/c; //Solución con el +
+					cout<<"\nLa primera solución de la ecuación "<<coef_x2<<"x^2+"<<coef_x1<<"x^1+"<<coef_x0<<"es "<<solecuacionmas<<". Continúa para ver la siguiente solución."<<endl;
+					system("PAUSE");
+					system("cls");
+					cout<<endl<<"Solución 2:"<<endl
+					<<"\nPaso 1: (-"<<coef_x2<<"-("<<coef_x1<<"^2-4*"<<coef_x2<<"*"<<coef_x0<<")^1/2)/(2*"<<coef_x2<<")"<<endl<<endl;
+					system("PAUSE");
+					a=coef_x1 * coef_x1;
+					d=4*coef_x2*coef_x0;
+					c=2*coef_x2;
+					cout<<"\nPaso 2: (-"<<coef_x2<<"-("<<a<<"-"<<d<<")^1/2)/("<<c<<")"<<endl<<endl;
+					system("PAUSE");
+					raiz=a-d;
+					cout<<"\nPaso 3: (-"<<coef_x2<<"-("<<raiz<<")^1/2)/("<<c<<")"<<endl<<endl;
+					system("PAUSE");
+					a=sqrt(raiz);
+					cout<<"\nPaso 4: (-"<<coef_x2<<"-"<<a<<")/("<<c<<")"<<endl<<endl;
+					system("PAUSE");
+					d=-coef_x2-a;
+					cout<<"\nPaso 5: "<<b<<"/"<<c<<endl<<endl;
+					system("PAUSE");
+					solecuacionmenos = d/c; //Solución con el +
+					cout<<"\nLa segunda solución de la ecuación "<<coef_x2<<"x^2+"<<coef_x1<<"x^1+"<<coef_x0<<"es "<<solecuacionmenos<<". Las dos soluciones de la ecuación son "<<solecuacionmas<<" y "<<solecuacionmenos<<endl;
+				}
+				system("PAUSE");
+				break;
+			case 3:
+				salir = 1;
+				break;
+			default:
+				cout<<"Opción incorrecta, prueba de nuevo"<<endl;
+				system("PAUSE");
+			}
+			}
+			cout<<"¡Gracias por utilizar el programa!";
+			system("PAUSE");
+			salir = 0;
+			break;
+        case 14:
+            while (salir!=1) {
+                system ("cls");
+                cout<<"Opciones avanzadas:"<<endl
+                    <<"1. Cambiar idioma del programa"<<endl
+                    <<"2. Cambiar color de la consola"<<endl
+                    <<"3. Easter EGG"<<endl;
+                cin>>opciones2;
+                switch (opciones2) {
+                case 1:
+                    while (salir!=1) {
+                    cout<<endl<<"Seleccione el idioma deseado disponible:"<<endl
+                        <<"1. Español"<<endl
+                        <<"2. Inglés"
+                        <<endl;
+                    cin>>opciones2;
+                    switch(opciones2) {
+                    case 1:
+                        cout<<"Español seleccionado correctamente"<<endl;
+                        salir=1;
+                        break;
+                    case 2:
+                        cout<<"Lo siento, el inglés todavía no está disponible"<<endl;
+                        salir=1;
+                        break;
+                    default:
+                        cout<<"Error, la opción elegida no existe."<<endl;
+                        salir=0;
+                        system("cls");
+                        break;
+                    }
+                    }
+                    salir=1;
+                    break;
+                case 2:
+                    cout<<"Lo siento, esta opción está todavía en desarrollo"<<endl;
+                    salir=1;
+                    break;
+                case 3:
+                    system("start https://github.com/rmnhg");
+                    salir=1;
+                    break;
+                default:
+                    cout<<"Error, la opción escogida no existe."<<endl;
+                    break;
+                }
             }
             system("PAUSE");
+            salir = 0;
             break;
-        case 14: //Salir
+        case 15: //Salir
             salir = 1;
             break;
         //Y sino...
