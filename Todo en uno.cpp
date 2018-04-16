@@ -41,10 +41,9 @@ float solecuacionmas,solecuacionmenos,coef_x2,coef_x1,coef_x0,a,c,d,raiz; //Prog
 #define pi 3.14159265 //Número Pi aproximado //Programa 11
 
 int main() {
-
     setlocale(LC_ALL, "Spanish"); //Permite utilizar caracteres españoles.
-    setlocale(LC_NUMERIC, "es_ES.UTF-8"); //Permite mostrar los números con decimales con una coma
-    setlocale(LC_TIME, "es_ES.UTF-8"); //Para mostrar la fecha en español
+    setlocale(LC_NUMERIC, "Spanish"); //Permite mostrar los números con decimales con una coma
+    setlocale(LC_TIME, "Spanish"); //Para mostrar la fecha en español
 
     while (salir == 0){ //No queremos salir todavía del programa. Saldremos cuando esta variable valga otra cosa, en nuestro caso 1.
     system("cls");
@@ -69,12 +68,14 @@ int main() {
     cin>>opcion;
     switch (opcion) {
         case 1:
+			system("cls");
             cout<<"Programa 1:"<<endl<<endl;
             cout<<"¡Hola Mundo!\n";
             cout<<endl;
             system("PAUSE");
             break;
         case 2:
+			system("cls");
             cout<<"Programa 2:"<<endl<<endl;
             cout<< "Por favor, inserte su nombre:"; //Pregunto el nombre
             cin >> nombre_persona; //Registro el nombre
@@ -83,20 +84,22 @@ int main() {
             system("PAUSE");
             break;
         case 3:
-                cout<<"Programa 3:"<<endl<<endl;
-                cout<< "Por favor, introduza su nombre:\n";
-                cin >> nombre_persona; //Registro el nombre de la persona
-                cout<< "Por favor, introduzca su edad:\n"; //Pregunto la edad
-                cin >> edad_persona; //Registro la edad
-                if (edad_persona<18) {
-                    cout<< "Lo sentimos " << nombre_persona << ", no podemos mostrarle este contenido. ¡Vuelva con 18 años!";
-                } else {
-                    cout<<"\n¡Bienvenido al casino! " << nombre_persona;
-                }
+			system("cls");
+            cout<<"Programa 3:"<<endl<<endl;
+            cout<< "Por favor, introduza su nombre:\n";
+            cin >> nombre_persona; //Registro el nombre de la persona
+            cout<< "Por favor, introduzca su edad:\n"; //Pregunto la edad
+            cin >> edad_persona; //Registro la edad
+            if (edad_persona<18) {
+                cout<< "Lo sentimos " << nombre_persona << ", no podemos mostrarle este contenido. ¡Vuelva con 18 años!";
+            } else {
+               cout<<"\n¡Bienvenido al casino! " << nombre_persona;
+            }
             cout<<endl;
             system("PAUSE");
             break;
         case 4:
+			system("cls");
             cout<<"Programa 4:"<<endl<<endl;
             cout << "Buenos días. Por favor, introduzca una letra.\nYo le diré si es consonante o vocal: ";
             cin>>letra;
@@ -139,6 +142,7 @@ int main() {
             system("PAUSE");
             break;
         case 5:
+			system("cls");
             cout<<"Programa 5:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -152,6 +156,7 @@ int main() {
             system("PAUSE");
             break;
         case 6:
+			system("cls");
             cout<<"Programa 6:"<<endl<<endl;
             cout << "Por favor, introduzca un número para calcular su factorial:\n";
             cin >> numero;
@@ -164,6 +169,7 @@ int main() {
             system("PAUSE");
             break;
         case 7:
+			system("cls");
             cout<<"Programa 7:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -184,6 +190,7 @@ int main() {
             system("PAUSE");
             break;
         case 8:
+			system("cls");
             cout<<"Programa 8:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -204,6 +211,7 @@ int main() {
             system("PAUSE");
             break;
         case 9:
+			system("cls");
             cout<<"Programa 9:"<<endl<<endl;
         	cout<<"Seleccione la operación que desea realizar:\n"
             <<"1. Grados centígrados a Farenheit\n"
@@ -229,6 +237,7 @@ int main() {
             system("PAUSE");
             break;
         case 10:
+			system("cls");
             cout<<"Programa 10:"<<endl<<endl;
             cout << "Por favor, introduzca el primer numero del intervalo:\n";
             cin >> numerouno;
@@ -257,6 +266,7 @@ int main() {
             system("PAUSE");
             break;
         case 11:
+			system("cls");
             cout<<"Programa 11 (blog 1):"<<endl<<endl;
             cout << "Programa para calcular la longitud y el área de una círculo.\n";
             cout << "Por favor, introduzca el radio de la círculo:\n";
@@ -288,6 +298,7 @@ int main() {
             system("PAUSE");
             break;
         case 12:
+			system("cls");
             cout<<"Programa 12 (blog 2):"<<endl<<endl;
             cout << "Programa para calcular el perímetro y el área de un cuadrado.\n";
             cout << "Por favor, introduzca el lado del cuadrado:\n";
@@ -319,6 +330,7 @@ int main() {
             system("PAUSE");
             break;
         case 13:
+			system("cls");
             cout<<"Programa 13:"<<endl<<endl;
             cout<<"Calculadora de ecuaciones de segundo grado.\n";
 			while (salir == 0) {
@@ -351,6 +363,7 @@ int main() {
 				system("PAUSE");
 				break;
 			case 2:
+				system("cls");
 				cout<<"En este programa puede especificar los coeficientes de una ecuación de segundo grado y la resolveremos paso a paso."<<endl
 					<<"Introduzca su coeficiente principal (x^2):"<<endl;
 				cin>>coef_x2;
