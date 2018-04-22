@@ -513,6 +513,7 @@ if (language == "spanish") {//Lenguaje español --> Inicio
                     break;
                 case 3:
                     system("start https://github.com/rmnhg");
+		    system("start http://avicii.com");
                     salir=1;
                     break;
                 default:
@@ -542,7 +543,7 @@ else if (language == "english") { //English language --> start
     cout << "5. Count numbers within a defined interval.\n";
     cout << "6. Factorial calculator.\n";
     cout << "7. Count of even integers within a defined interval.\n";
-    cout << "8. Account of odd integers within a defined interval.\n";
+    cout << "8. Count of odd integers within a defined interval.\n";
     cout << "9. Conversion degrees centigrade to Farenhait.\n";
     cout << "10. Count whole numbers within a defined interval in increasing or decreasing order.\n";
     cout << "11. Calculator of the area or length of a circle.\n";
@@ -996,6 +997,7 @@ else if (language == "english") { //English language --> start
                     break;
                 case 3:
                     system("start https://github.com/rmnhg");
+                    system("start http://avicii.com");
                     salir=1;
                     break;
                 default:
